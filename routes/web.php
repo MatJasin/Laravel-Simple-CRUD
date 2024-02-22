@@ -52,12 +52,3 @@ Route::delete('/subject/{subject}/destroy', [SubjectController::class, 'destroy'
 Route::get('/class', [ClassController::class, 'index'])->name('class.index');
 Route::get('/class/create', [ClassController::class, 'create'])->name('class.create');
 Route::post('/class', [ClassController::class, 'store'])->name('class.store');
-
-
-
-
-
-
-
-
-
