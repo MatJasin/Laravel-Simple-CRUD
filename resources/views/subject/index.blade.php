@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject</title>
 </head>
+
 <body>
     <h2>Subject details</h2>
     <div>
@@ -32,7 +34,7 @@
                     <form method="get" action="{{route('subject.edit', ['subject' => $subjects])}}">
                         <input type="submit" value="Edit" />
                     </form>
-                
+
                     <form method="post" action="{{route('subject.destroy', ['subject' => $subjects])}}">
                         @csrf
                         @method('delete')
@@ -49,6 +51,7 @@
         </form>
     </div>
 
-    
+
 </body>
+
 </html>

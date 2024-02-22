@@ -17,10 +17,8 @@ class student extends Model
         'course'
     ];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(user::class, 'user_id');
     }
-
-
-    
 }

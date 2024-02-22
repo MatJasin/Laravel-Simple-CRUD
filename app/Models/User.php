@@ -43,19 +43,19 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function student() {
+    public function student()
+    {
         return $this->hasOne(student::class);
     }
 
-    
-    public function cars() {
+
+    public function cars()
+    {
         return $this->hasMany(car::class);
     }
 
-    public function subject(){
+    public function subject()
+    {
         return $this->belongsToMany(subject::class, 'class', 'user_id', 'subject_id')->using(Classes::class);
     }
 }
-
-    
-

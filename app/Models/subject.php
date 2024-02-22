@@ -9,14 +9,15 @@ class subject extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
+    protected $fillable = [
         'code',
         'subject',
         'lecturer',
         'description'
     ];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsToMany(user::class, 'class', 'user_id', 'subject_id')->using(Classes::class);
     }
 }

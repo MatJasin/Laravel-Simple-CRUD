@@ -16,9 +16,9 @@ class car extends Model
         'plate'
     ];
 
-    
-    public function user() {
+
+    public function user()
+    {
         return $this->belongsTo(user::class, 'user_id');
     }
-
 }

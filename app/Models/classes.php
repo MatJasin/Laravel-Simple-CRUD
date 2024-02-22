@@ -10,5 +10,4 @@ class classes extends Model
     use HasFactory;
 
     protected $table = 'class';
-
 }
