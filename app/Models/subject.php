@@ -16,8 +16,8 @@ class subject extends Model
         'description'
     ];
 
-    public function user()
+    public function users()
     {
-        return $this->belongsToMany(user::class, 'class', 'user_id', 'subject_id')->using(Classes::class);
+        return $this->belongsToMany(user::class, 'enrollment', 'user_id', 'subject_id');
     }
 }

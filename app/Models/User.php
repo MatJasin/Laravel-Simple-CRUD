@@ -54,8 +54,8 @@ class User extends Authenticatable
         return $this->hasMany(car::class);
     }
 
-    public function subject()
+    public function subjects()
     {
-        return $this->belongsToMany(subject::class, 'class', 'user_id', 'subject_id')->using(Classes::class);
+        return $this->belongsToMany(subject::class, 'enrollment', 'user_id', 'subject_id');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\CarController;
-use App\Http\Controllers\ClassController;
+use App\Http\Controllers\EnrollmentController;
 
 
 /*
@@ -49,6 +49,6 @@ Route::get('/subject/{subject}/edit', [SubjectController::class, 'edit'])->name(
 Route::put('/subject/{subject}/update', [SubjectController::class, 'update'])->name('subject.update');
 Route::delete('/subject/{subject}/destroy', [SubjectController::class, 'destroy'])->name('subject.destroy');
 
-Route::get('/class', [ClassController::class, 'index'])->name('class.index');
-Route::get('/class/create', [ClassController::class, 'create'])->name('class.create');
-Route::post('/class', [ClassController::class, 'store'])->name('class.store');
+Route::get('/enrollment', [EnrollmentController::class, 'index'])->name('enrollment.index');
+Route::get('/enrollment/create', [EnrollmentController::class, 'create'])->name('enrollment.create');
+Route::post('/enrollment', [EnrollmentController::class, 'store'])->name('enrollment.store');
